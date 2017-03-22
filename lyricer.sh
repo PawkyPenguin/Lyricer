@@ -1,5 +1,5 @@
 #! /bin/sh
-cd ~/scripts/gittracked/portalLyrics
+cd "$(dirname "$0")"
 songChoice=$(cat songChoice.save)
 [[ -z $songChoice ]] && songChoice=0
 file="songs/$(ls -1 songs | head -$((songChoice + 1)) | tail -1)"
